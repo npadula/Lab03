@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Spinner;
 
@@ -16,8 +17,10 @@ public class AltaOferta extends AppCompatActivity {
     EditText txtDescripcion;
     EditText txtHoras;
     EditText txtPrecioHora;
+    CheckBox checkbox;
 
     String[] monedas = {"USD","EUR","ARS","LIBRA","REAL"};
+    private Intent i;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +30,7 @@ public class AltaOferta extends AppCompatActivity {
         txtDescripcion = (EditText) findViewById(R.id.editText);
         txtHoras = (EditText) findViewById(R.id.editText4);
         txtPrecioHora = (EditText) findViewById(R.id.editText3);
+        checkbox = (CheckBox) findViewById(R.id.checkBox);
 
         spinnerCategorias = (Spinner) findViewById(R.id.spinner);
         ArrayAdapter adapterCategorias = new ArrayAdapter<Categoria>(this,android.R.layout.simple_spinner_item,Categoria.CATEGORIAS_MOCK);
@@ -39,17 +43,26 @@ public class AltaOferta extends AppCompatActivity {
         btnCrear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Trabajo t = new Trabajo();
-                t.setCategoria((Categoria)spinnerCategorias.getSelectedItem());
-                t.setMonedaPago((int)spinnerMonedas.getSelectedItem());
-                t.setDescripcion(txtDescripcion.getText().toString());
-                t.setPrecioMaximoHora(Double.parseDouble(txtPrecioHora.getText().toString()));
-                t.setHorasPresupuestadas(Integer.parseInt(txtHoras.getText().toString()));
+                try{
+                    Trabajo t = new Trabajo();
+                    t.setCategoria((Categoria)spinnerCategorias.getSelectedItem());
+                    t.setHorasPresupuestadas(Integer.parseInt(txtHoras.getText().toString()));
+                    t.setMonedaPago(spinnerMonedas.getSelectedItemPosition());
+                    t.setDescripcion(txtDescripcion.getText().toString());
+                    t.setPrecioMaximoHora(Double.parseDouble(txtPrecioHora.getText().toString()));
+                    t.setRequiereIngles(checkbox.isChecked());
+                    t.setId(Trabajo.getNewID());
 
-                Intent i = getIntent();
+                    i = getIntent();
 
-                i.putExtra("OFERTA",t);
-                finish();
+                    i.putExtra("OFERTA",t);
+                    setResult(RESULT_OK, i);
+                    finish();
+                }
+                catch (Exception ex){
+                    setResult(RESULT_CANCELED,i);
+                    finish();
+                }
 
             }
         });

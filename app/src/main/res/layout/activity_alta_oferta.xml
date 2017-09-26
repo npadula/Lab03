@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="padula.delaiglesia.dam.isi.frsf.lab03.AltaOferta">
 
     <EditText
@@ -13,16 +14,20 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Descripción"
-        tools:layout_editor_absoluteX="34dp"
-        tools:layout_editor_absoluteY="41dp" />
+        android:layout_marginBottom="@dimen/activity_horizontal_margin"/>
+
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginBottom="@dimen/activity_horizontal_margin">
 
     <CheckBox
         android:id="@+id/checkBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Req. Inglés"
-        tools:layout_editor_absoluteX="256dp"
-        tools:layout_editor_absoluteY="224dp" />
+        android:layout_marginBottom="@dimen/activity_horizontal_margin"/>
 
     <EditText
         android:id="@+id/editText3"
@@ -31,8 +36,7 @@
         android:ems="10"
         android:inputType="number"
         android:text="Precio/Hora"
-        tools:layout_editor_absoluteX="122dp"
-        tools:layout_editor_absoluteY="216dp" />
+        android:layout_marginBottom="@dimen/activity_horizontal_margin"/>
 
     <EditText
         android:id="@+id/editText4"
@@ -41,28 +45,26 @@
         android:ems="10"
         android:inputType="number"
         android:text="Horas"
-        tools:layout_editor_absoluteX="36dp"
-        tools:layout_editor_absoluteY="216dp" />
+        android:layout_marginBottom="@dimen/activity_horizontal_margin"/>
+</LinearLayout>
+
 
     <Spinner
         android:id="@+id/spinner"
         android:layout_width="316dp"
         android:layout_height="29dp"
-        tools:layout_editor_absoluteX="36dp"
-        tools:layout_editor_absoluteY="160dp" />
+        android:layout_marginBottom="@dimen/activity_horizontal_margin"/>
 
     <Spinner
         android:id="@+id/spinner2"
         android:layout_width="314dp"
         android:layout_height="31dp"
-        tools:layout_editor_absoluteX="36dp"
-        tools:layout_editor_absoluteY="110dp" />
+        android:layout_marginBottom="@dimen/activity_horizontal_margin"/>
 
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Crear"
-        tools:layout_editor_absoluteX="260dp"
-        tools:layout_editor_absoluteY="379dp" />
-</android.support.constraint.ConstraintLayout>
+        android:layout_marginBottom="@dimen/activity_horizontal_margin"/>
+</LinearLayout>
