@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="padula.delaiglesia.dam.isi.frsf.lab03.AltaOferta">
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="316dp"
+        android:layout_height="47dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Descripción"
+        tools:layout_editor_absoluteX="34dp"
+        tools:layout_editor_absoluteY="41dp" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Req. Inglés"
+        tools:layout_editor_absoluteX="256dp"
+        tools:layout_editor_absoluteY="224dp" />
+
+    <EditText
+        android:id="@+id/editText3"
+        android:layout_width="114dp"
+        android:layout_height="42dp"
+        android:ems="10"
+        android:inputType="number"
+        android:text="Precio/Hora"
+        tools:layout_editor_absoluteX="122dp"
+        tools:layout_editor_absoluteY="216dp" />
+
+    <EditText
+        android:id="@+id/editText4"
+        android:layout_width="86dp"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:inputType="number"
+        android:text="Horas"
+        tools:layout_editor_absoluteX="36dp"
+        tools:layout_editor_absoluteY="216dp" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="316dp"
+        android:layout_height="29dp"
+        tools:layout_editor_absoluteX="36dp"
+        tools:layout_editor_absoluteY="160dp" />
+
+    <Spinner
+        android:id="@+id/spinner2"
+        android:layout_width="314dp"
+        android:layout_height="31dp"
+        tools:layout_editor_absoluteX="36dp"
+        tools:layout_editor_absoluteY="110dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Crear"
+        tools:layout_editor_absoluteX="260dp"
+        tools:layout_editor_absoluteY="379dp" />
+</android.support.constraint.ConstraintLayout>
