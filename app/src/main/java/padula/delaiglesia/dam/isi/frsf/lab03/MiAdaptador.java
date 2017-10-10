@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.CheckBox;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import org.w3c.dom.Text;
@@ -75,6 +76,25 @@ public class MiAdaptador extends BaseAdapter {
 
         holder.requiereIngles = (CheckBox) row.findViewById(R.id.ingles);
         holder.requiereIngles.setChecked(getItem(i).getRequiereIngles());
+
+        holder.bandera = (ImageView) row.findViewById(R.id.imageViewBandera);
+        switch(t.getMonedaPago()){
+            case 1:
+                holder.bandera.setImageResource(R.drawable.us);
+                break;
+            case 2:
+                holder.bandera.setImageResource(R.drawable.eu);
+                break;
+            case 3:
+                holder.bandera.setImageResource(R.drawable.ar);
+                break;
+            case 4:
+                holder.bandera.setImageResource(R.drawable.uk);
+                break;
+            case 5:
+                holder.bandera.setImageResource(R.drawable.br);
+                break;
+        }
 
         return(row);
     }

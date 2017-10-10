@@ -2,6 +2,7 @@ package padula.delaiglesia.dam.isi.frsf.lab03;
 
 import android.view.View;
 import android.widget.CheckBox;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 /**
@@ -15,6 +16,7 @@ public class ViewHolder {
     public  TextView precioHora;
     public  TextView fechaFin;
     public  CheckBox requiereIngles;
+    public ImageView bandera;
 
     ViewHolder(View row, Trabajo t){
         nombreTrabajo = (TextView) row.findViewById(R.id.nombrePuesto);
@@ -34,5 +36,25 @@ public class ViewHolder {
 
         requiereIngles = (CheckBox) row.findViewById(R.id.ingles);
         requiereIngles.setChecked(t.getRequiereIngles());
+
+
+        bandera = (ImageView) row.findViewById(R.id.imageViewBandera);
+        switch(t.getMonedaPago()){
+            case 1:
+                bandera.setImageResource(R.drawable.us);
+                break;
+            case 2:
+                bandera.setImageResource(R.drawable.eu);
+                break;
+            case 3:
+                bandera.setImageResource(R.drawable.ar);
+                break;
+            case 4:
+                bandera.setImageResource(R.drawable.uk);
+                break;
+            case 5:
+                bandera.setImageResource(R.drawable.br);
+                break;
+        }
     }
 }

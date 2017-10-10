@@ -68,4 +68,31 @@ public class AltaOferta extends AppCompatActivity {
         });
     }
 
+    @Override
+    protected void onSaveInstanceState(Bundle outState){
+        super.onSaveInstanceState(outState);
+        outState.putString("HORAS",txtHoras.getText().toString());
+        outState.putString("PRECIO_HORA",txtPrecioHora.getText().toString());
+        outState.putBoolean("INGLES",checkbox.isChecked());
+        outState.putString("DESCRIPCION",txtDescripcion.getText().toString());
+        outState.putInt("MONEDA",spinnerMonedas.getSelectedItemPosition());
+        outState.putInt("CATEGORIA",spinnerCategorias.getSelectedItemPosition());
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle previousState){
+        super.onRestoreInstanceState(previousState);
+
+        txtPrecioHora.setText(previousState.getString("PRECIO_HORA"));
+        txtHoras.setText((previousState.getString("HORAS")));
+        checkbox.setChecked(previousState.getBoolean("INGLES"));
+        txtDescripcion.setText(previousState.getString("DESCRIPCION"));
+
+        spinnerCategorias.setSelection(previousState.getInt("CATEGORIA"));
+        spinnerMonedas.setSelection(previousState.getInt("MONEDA"));
+
+
+
+    }
+
 }

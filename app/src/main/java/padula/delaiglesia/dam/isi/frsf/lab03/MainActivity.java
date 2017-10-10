@@ -7,6 +7,7 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.ContextMenu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -66,11 +67,32 @@ public class MainActivity extends AppCompatActivity {
             public void onCreateContextMenu(ContextMenu contextMenu, View view, ContextMenu.ContextMenuInfo contextMenuInfo) {
                 AdapterView.AdapterContextMenuInfo contextInfo = (AdapterView.AdapterContextMenuInfo)contextMenuInfo;
                 Trabajo trabajoSeleccionado = adaptador.getItem(contextInfo.position);
-                Toast.makeText(getApplicationContext(),trabajoSeleccionado.getDescripcion(),Toast.LENGTH_LONG).show();
+
+                MenuInflater inflater = getMenuInflater();
+                inflater.inflate(R.menu.menu, contextMenu);
+
+//                Toast.makeText(getApplicationContext(),trabajoSeleccionado.getDescripcion(),Toast.LENGTH_LONG).show();
             }
         });
+
+
     }
 
+
+    @Override
+    public boolean onContextItemSelected(MenuItem item){
+        AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
+        switch (item.getItemId()) {
+            case R.id.descartarOferta:
+                Toast.makeText(getApplicationContext(),"La oferta ha sido descartada",Toast.LENGTH_LONG).show();
+                return true;
+            case R.id.postularseOferta:
+                Toast.makeText(getApplicationContext(),"Usted se ha postulado a esta oferta",Toast.LENGTH_LONG).show();
+                return true;
+            default:
+                return super.onContextItemSelected(item);
+    }
+    }
 
 
     @Override
