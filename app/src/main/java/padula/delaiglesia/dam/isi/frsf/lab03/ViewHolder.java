@@ -5,6 +5,8 @@ import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.text.DecimalFormat;
+
 /**
  * Created by st on 19/09/2017.
  */
@@ -28,8 +30,10 @@ public class ViewHolder {
         horas = (TextView) row.findViewById(R.id.horas);
         horas.setText("Horas " + t.getHorasPresupuestadas().toString() + " Max");
 
+        DecimalFormat df = new DecimalFormat("#.00");
+
         precioHora = (TextView) row.findViewById(R.id.precioHora);
-        precioHora.setText("$/Hora: " + t.getPrecioMaximoHora().toString());
+        precioHora.setText("$/Hora: " + df.format(t.getPrecioMaximoHora()));
 
         fechaFin = (TextView) row.findViewById(R.id.fechaFin);
         fechaFin.setText("Fecha fin: " + t.getFechaEntrega().toString());

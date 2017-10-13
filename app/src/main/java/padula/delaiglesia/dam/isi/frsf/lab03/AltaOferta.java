@@ -47,7 +47,24 @@ public class AltaOferta extends AppCompatActivity {
                     Trabajo t = new Trabajo();
                     t.setCategoria((Categoria)spinnerCategorias.getSelectedItem());
                     t.setHorasPresupuestadas(Integer.parseInt(txtHoras.getText().toString()));
-                    t.setMonedaPago(spinnerMonedas.getSelectedItemPosition());
+                    switch (spinnerMonedas.getSelectedItemPosition()){
+                        //el indice del spinner comienza en cero
+                        case 0:
+                            t.setMonedaPago(1);
+                            break;
+                        case 1:
+                            t.setMonedaPago(2);
+                            break;
+                        case 2:
+                            t.setMonedaPago(3);
+                            break;
+                        case 3:
+                            t.setMonedaPago(4);
+                            break;
+                        case 4:
+                            t.setMonedaPago(5);
+                            break;
+                    }
                     t.setDescripcion(txtDescripcion.getText().toString());
                     t.setPrecioMaximoHora(Double.parseDouble(txtPrecioHora.getText().toString()));
                     t.setRequiereIngles(checkbox.isChecked());
