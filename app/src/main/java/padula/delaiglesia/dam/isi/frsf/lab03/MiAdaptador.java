@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import org.w3c.dom.Text;
 
+import java.text.DecimalFormat;
 import java.util.List;
 
 /**
@@ -68,8 +69,9 @@ public class MiAdaptador extends BaseAdapter {
         holder.horas = (TextView) row.findViewById(R.id.horas);
         holder.horas.setText("Horas " + getItem(i).getHorasPresupuestadas().toString() + " Max");
 
+        DecimalFormat df = new DecimalFormat("#.00");
         holder.precioHora = (TextView) row.findViewById(R.id.precioHora);
-        holder.precioHora.setText("$/Hora: " + getItem(i).getPrecioMaximoHora().toString());
+        holder.precioHora.setText(" $/Hora: " + df.format(getItem(i).getPrecioMaximoHora()));
 
         holder.fechaFin = (TextView) row.findViewById(R.id.fechaFin);
         holder.fechaFin.setText("Fecha fin: " + getItem(i).getFechaEntrega().toString());
