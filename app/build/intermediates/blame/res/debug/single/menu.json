@@ -4,7 +4,15 @@
         "source": "C:\\Users\\st\\AndroidStudioProjects\\Nueva carpeta\\Lab03\\app\\src\\main\\res\\menu\\menu_main.xml"
     },
     {
+        "merged": "D:\\Documentos\\Facultad\\Desarrollo Movil\\Lab03\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_main.xml",
+        "source": "D:\\Documentos\\Facultad\\Desarrollo Movil\\Lab03\\app\\src\\main\\res\\menu\\menu_main.xml"
+    },
+    {
         "merged": "C:\\Users\\st\\AndroidStudioProjects\\Nueva carpeta\\Lab03\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu.xml",
         "source": "C:\\Users\\st\\AndroidStudioProjects\\Nueva carpeta\\Lab03\\app\\src\\main\\res\\menu\\menu.xml"
+    },
+    {
+        "merged": "D:\\Documentos\\Facultad\\Desarrollo Movil\\Lab03\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu.xml",
+        "source": "D:\\Documentos\\Facultad\\Desarrollo Movil\\Lab03\\app\\src\\main\\res\\menu\\menu.xml"
     }
 ]

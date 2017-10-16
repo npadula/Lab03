@@ -1,11 +1,27 @@
 [
     {
+        "merged": "D:\\Documentos\\Facultad\\Desarrollo Movil\\Lab03\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_template_icon_group.xml",
+        "source": "D:\\Documentos\\Facultad\\Desarrollo Movil\\Lab03\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\layout-v21\\notification_template_icon_group.xml"
+    },
+    {
         "merged": "C:\\Users\\st\\AndroidStudioProjects\\Nueva carpeta\\Lab03\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_template_custom_big.xml",
         "source": "C:\\Users\\st\\AndroidStudioProjects\\Nueva carpeta\\Lab03\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\layout-v21\\notification_template_custom_big.xml"
     },
     {
         "merged": "C:\\Users\\st\\AndroidStudioProjects\\Nueva carpeta\\Lab03\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_action.xml",
         "source": "C:\\Users\\st\\AndroidStudioProjects\\Nueva carpeta\\Lab03\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\layout-v21\\notification_action.xml"
+    },
+    {
+        "merged": "D:\\Documentos\\Facultad\\Desarrollo Movil\\Lab03\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_action_tombstone.xml",
+        "source": "D:\\Documentos\\Facultad\\Desarrollo Movil\\Lab03\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\layout-v21\\notification_action_tombstone.xml"
+    },
+    {
+        "merged": "D:\\Documentos\\Facultad\\Desarrollo Movil\\Lab03\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_template_custom_big.xml",
+        "source": "D:\\Documentos\\Facultad\\Desarrollo Movil\\Lab03\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\layout-v21\\notification_template_custom_big.xml"
+    },
+    {
+        "merged": "D:\\Documentos\\Facultad\\Desarrollo Movil\\Lab03\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_action.xml",
+        "source": "D:\\Documentos\\Facultad\\Desarrollo Movil\\Lab03\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\layout-v21\\notification_action.xml"
     },
     {
         "merged": "C:\\Users\\st\\AndroidStudioProjects\\Nueva carpeta\\Lab03\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_template_icon_group.xml",
